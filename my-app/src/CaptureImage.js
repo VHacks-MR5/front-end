@@ -15,9 +15,9 @@ class CaptureImage extends React.Component {
     this.webcam = webcam;
   }
  
-  capture = () => {
+  capture = (event) => {
+    event.preventDefault();
     const screenshot = this.webcam.getScreenshot();
-    this.setState({ screenshot });
     this.props.callbackFromParent(screenshot);
   };
 

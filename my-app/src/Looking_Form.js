@@ -13,7 +13,6 @@ class LookingForm extends React.Component {
       my_last_name: '',
       my_email: '',
       my_phone: '', 
-
       person_name: '',
       person_age: '', 
       person_gender: '', 
@@ -86,8 +85,17 @@ class LookingForm extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        firstParam: 'yourValue',
-        secondParam: 'yourOtherValue',
+        my_screenshot: this.my_screenshot,
+        my_name: this.my_name,
+        my_last_name: this.my_last_name,
+        my_email: this.my_email,
+        my_phone: this.my_phone, 
+        person_name: this.person_name,
+        person_age: this.person_age, 
+        person_gender: this.person_gender, 
+        person_nationality:this.person_nationality, 
+        person_nname:this.person_nname, 
+        person_location: this.person_location
       })
     }); 
   }
