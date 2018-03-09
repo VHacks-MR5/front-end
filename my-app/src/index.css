@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  background-color: #949BA0;
+}
+
+
+.MainPage{
+	border-radius: 25px;
+	font-family: 'Cinzel', serif; 
+	padding: 50px 75px; 
+	position: inline; 
+	margin: 75px 50px 50px 50px; 
+	font-size: 1.5em;
+}
+
+.MainPage:hover{
+	border: 2px solid black;
+}
+
