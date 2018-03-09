@@ -37,23 +37,13 @@ class App extends Component {
     console.log(this.state);
   }
 
-// render((
-//   <Router history={hashHistory}>
-//     <Route path="/" component={App}/>
-//   </Router>
-// ), document.getElementById('app'));
-
-// <span className="input-group-btn">
-//           <Link className="MainPage" to="/looking_form" component={LookingForm}>Find someone</Link>
-//         </span>
-
 render() {
     var hashHistory = Router.hashHistory;
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Viniculum</h1>
+          <h1 className="App-title">Vinculum</h1>
         </header> 
 
       <LookingForm />

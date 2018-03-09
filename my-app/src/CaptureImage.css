@@ -1,7 +1,11 @@
 .capimage{
-	vertical-align: center;
+	position: relative;
 }
 
 input{
-	vertical-align: center;
+	vertical-align: right;
+}
+
+h4{
+	padding-top: 20px;
 }

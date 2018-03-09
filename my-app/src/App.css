@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
 .App {
-  text-align: center;
+  text-align: center; 
+  font-family:'Cinzel', serif;
+  background-color: #949BA0; 
+  height:100%;
 }
 
 .App-logo {

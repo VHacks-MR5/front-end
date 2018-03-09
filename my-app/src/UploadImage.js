@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Webcam from 'react-webcam';
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
+
 import './index.css';
 
 class UploadImage extends React.Component {
@@ -9,29 +11,24 @@ class UploadImage extends React.Component {
     this.state = {
       screenshot: null
     };
+    this.onImageDrop = this.onImageDrop.bind(this);
   }
 
-  setRef = (webcam) => {
-    this.webcam = webcam;
+
+  onImageDrop = (file) => {
+    const screenshot = file;
+    this.props.callbackFromParent(screenshot);
   }
- 
-  capture = () => {
-    const screenshot = this.webcam.getScreenshot();
-    this.setState({ screenshot });
-  };
+
 
   render() {
     return(
-     <div>
-     <Webcam
-          audio={false}
-          height={350}
-          ref={this.setRef}
-          screenshotFormat="image/jpeg"
-          width={350} />
-     <button className="capimage"  onClick={this.capture} >Capture photo</button>
-     {this.state.screenshot ? <img src={this.state.screenshot} /> : null}
-     </div>
+     <Dropzone
+      multiple={false}
+      accept="image/*"
+      onDrop={this.onImageDrop.bind(this)}>
+      <p>Drop an image or click to select a file to upload.</p>
+    </Dropzone>
      );
   }
 }

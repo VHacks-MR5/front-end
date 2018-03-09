@@ -16,13 +16,14 @@ class CaptureImage extends React.Component {
   }
  
   capture = (event) => {
-    event.preventDefault();
-    const screenshot = this.webcam.getScreenshot();
-    this.props.callbackFromParent(screenshot);
+   event.preventDefault();
+   const screenshot = this.webcam.getScreenshot();
+   this.props.callbackFromParent(screenshot);
   };
 
   render() {
     return(
+      <div>
      <div>
      <Webcam
           audio={false}
@@ -30,7 +31,10 @@ class CaptureImage extends React.Component {
           ref={this.setRef}
           screenshotFormat="image/jpeg"
           width={350} />
+      </div>
+      <div>
      <button className="capimage"  onClick={this.capture} >Capture photo</button>
+     </div>
      </div>
      );
   }
