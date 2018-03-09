@@ -124,13 +124,13 @@ class LookingForm extends React.Component {
           <input type="text" value={this.state.person_name} onChange={this.personNameChange} /> 
 
           <CaptureImage callbackFromParent={this.imageCallback}/> 
-          {this.state.my_screenshot ? <img src={this.state.my_screenshot} /> : null}
+          
 
           <br />
            Missing Person Descriptors: 
           Age<input type="text" value={this.state.person_age} onChange={this.personAgeChange} />
           Gender<input type="text" value={this.state.person_gender} onChange={this.personGenderChange} />
-          Nationality<input type="text" value={this.state.person_hair} onChange={this.personNationalityChange} />
+          Nationality<input type="text" value={this.state.person_nationality} onChange={this.personNationalityChange} />
           Nickname<input type="text" value={this.state.person_nname} onChange={this.personNNameChange} />
           Place last seen<input type="text" value={this.state.person_location} onChange={this.personLastSeenChange} />
         </label>
