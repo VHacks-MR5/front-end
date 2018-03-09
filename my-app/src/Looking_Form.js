@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CaptureImage from './CaptureImage';
 import UploadImage from './UploadImage';
-import './CaptureImage.css';
+import './styles/CaptureImage.css';
 import { Container, Row, Col } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 var base64Img = require('base64-img');

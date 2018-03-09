@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
-import './index.css';
+import './styles/index.css';
 
 class UploadImage extends React.Component {
 

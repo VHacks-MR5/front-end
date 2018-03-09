@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Router, Route, Link, RouteHandler} from 'react-router';
 import logo from './img/vatican.png';
-import './App.css';
+import './styles/App.css';
 import CaptureImage from './CaptureImage';
 import UploadImage from './UploadImage';
 import LookingForm from './Looking_Form';

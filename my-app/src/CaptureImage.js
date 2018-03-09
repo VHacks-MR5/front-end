@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Webcam from 'react-webcam';
-import './CaptureImage.css';
+import './styles/CaptureImage.css';
 
 class CaptureImage extends React.Component {
 
