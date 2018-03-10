@@ -1,0 +1,19 @@
+@import 'colors.css';
+
+.footer {
+  background-color: var(--light-teal);
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.footer-logo-container {
+  align-items: inline;
+  vertical-align: center;
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
+.footer-logo {
+  height: 50px; width: auto;
+}
