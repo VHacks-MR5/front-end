@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CaptureImage from './CaptureImage';
 import UploadImage from './UploadImage';
+import Results from './Results';
 import './CaptureImage.css';
 import { Container, Row, Col } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -10,7 +11,7 @@ class LookingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      looking: true,
+      submitted: false,
       my_screenshot: null,
       my_name: '',
       my_last_name: '',
@@ -82,27 +83,28 @@ class LookingForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault(); 
     console.log(this.state);
-    fetch('/submit', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        my_screenshot: this.my_screenshot,
-        my_name: this.my_name,
-        my_last_name: this.my_last_name,
-        my_email: this.my_email,
-        my_phone: this.my_phone,
-        person_image: this.person_image,
-        person_name: this.person_name,
-        person_age: this.person_age, 
-        person_gender: this.person_gender, 
-        person_nationality:this.person_nationality, 
-        person_nname:this.person_nname, 
-        person_location: this.person_location
-      })
-    }); 
+    this.setState({'submitted': true });
+    // fetch('/submit', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     my_screenshot: this.my_screenshot,
+    //     my_name: this.my_name,
+    //     my_last_name: this.my_last_name,
+    //     my_email: this.my_email,
+    //     my_phone: this.my_phone,
+    //     person_image: this.person_image,
+    //     person_name: this.person_name,
+    //     person_age: this.person_age, 
+    //     person_gender: this.person_gender, 
+    //     person_nationality:this.person_nationality, 
+    //     person_nname:this.person_nname, 
+    //     person_location: this.person_location
+    //   })
+    // }); 
   }
 
   imageMeCallback = (imageScreenshot) => { 
@@ -111,12 +113,13 @@ class LookingForm extends React.Component {
   }
 
   imagePersonCallback = (imageScreenshot) => {
-      console.log(imageScreenshot[0].preview);
-     // var data = base64Img.base64Sync();
       this.setState({person_image: imageScreenshot[0].preview});
   }
 
-  render() {
+  render() { 
+    if (this.state.submitted){
+      return <Results />
+    } else {
     return (
       <form onSubmit={this.handleSubmit} className=""> 
         <Container> 
@@ -154,7 +157,7 @@ class LookingForm extends React.Component {
         {this.state.my_screenshot ? <div><p> This is the image that will be submitted. If you would like to retake the photo, simply re-capture the photo</p><img src={this.state.my_screenshot} /></div> : null}
    
       </form>
-    );
+    );}
   }
 }
 
