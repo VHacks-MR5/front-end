@@ -4,6 +4,11 @@
 	position: relative;
 }
 
+.uploadimage{
+  position: relative;
+  width: 50px;
+}
+
 input{
 	vertical-align: right;
 }
@@ -55,6 +60,11 @@ h4{
   outline: none;
 }
 
+.result {
+  max-width: 500px;
+  max-width: 400px;
+}
+
 .submit {
   color: white;
   font-size: 30px;
@@ -64,6 +74,8 @@ h4{
   color: white;
   border: 1px solid white;
   border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .submit:hover {

@@ -39,6 +39,7 @@ class LookingForm extends React.Component {
     this.personNNameChange = this.personNNameChange.bind(this);
     this.personLastSeenChange = this.personLastSeenChange.bind(this);
 
+    this.undo = this.undo.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -82,6 +83,11 @@ class LookingForm extends React.Component {
     this.setState({person_location: event.target.value});
   }
 
+  undo(event) {
+    console.log(this.state.person_image);
+    this.setState({person_image: false});
+  }
+
   handleSubmit(event) {
     event.preventDefault();
     fetch('http://13.95.154.58:5000/upload', {
@@ -121,7 +127,8 @@ class LookingForm extends React.Component {
         person_location: this.person_location**/
   render() { 
     if (this.state.submitted){
-      return <ResultsList />
+      console.log("HGHGKLJSDHFJUSDHFLJKHSLD KFJ")
+      return (<ResultsList />)
     } else {
     return (
       <form onSubmit={this.handleSubmit} className=""> 
@@ -147,9 +154,14 @@ class LookingForm extends React.Component {
               <input className="mdl-textfield__input answer" type="text" name="lastName" placeholder="Gender" onChange={this.personGenderChange}/>
               <input className="mdl-textfield__input answer" type="text" name="email" placeholder="Age" onChange={this.personAgeChange}/>
               <input className="mdl-textfield__input answer" type="text" name="phone" placeholder="Nationality" onChange={this.personNationalityChange}/>
-              <input className="mdl-textfield__input answer" type="text" name="phone" placeholder="Country last seen in" onChange={this.personLastSeenChange}/>
-              <UploadImage callbackFromParent={this.imagePersonCallback}/> 
-              {this.state.person_image ? <div><p> This is the image that will be submitted</p><img src={this.state.person_image} /></div> : null}
+              <input className="mdl-textfield__input answer" type="text" name="phone" placeholder="Country last seen in" onChange={this.personLastSeenChange}/> 
+              {this.state.person_image ? 
+                <div>
+                  <p> This is the image that will be submitted</p>
+                  <img src={this.state.person_image} className="result"/>
+                  <input className="btn uploadImage"  onClick={this.undo} value="Choose Another" />
+                </div> 
+                : <UploadImage callbackFromParent={this.imagePersonCallback}/>}
             </div>
             </Col>
           </Row>

@@ -34,7 +34,7 @@ class CaptureImage extends React.Component {
           width={350} />
       </div>
       <div>
-     <button className="btn capimage"  onClick={this.capture} >Capture photo</button>
+     <button className="btn capimage"  onClick={this.capture} >Capture Photo</button>
      </div>
      </div>
      );
