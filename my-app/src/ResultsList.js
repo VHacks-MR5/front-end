@@ -4,8 +4,8 @@ import axios from 'axios';
 
 class ResultsList extends React.Component {
   constructor(props) {
-    super(props);
-
+    super(props); 
+    console.log(this.props.url);
     this.state = {
       texts:[], 
       image:''
@@ -13,14 +13,14 @@ class ResultsList extends React.Component {
   }
 
 componentDidMount(){
-        axios.get("http://13.95.154.58:5000/match/app?url=https://pbs.twimg.com/profile_images/699011281118851072/JwU6pzeT_400x400.jpg")
-        .then( response => {
-          const photo = response.data.messages.splice(-1,1)[0].attachment.payload.url; 
-          const data = response.data.messages.splice(0,response.data.messages.length); 
-          console.log(photo);
-          this.setState({ texts: data, image: photo }
-          );
-        });
+    axios.get("http://13.95.154.58:5000/match/app?url=https://pbs.twimg.com/profile_images/699011281118851072/JwU6pzeT_400x400.jpg")
+    .then( response => {
+      const photo = response.data.messages.splice(-1,1)[0].attachment.payload.url; 
+      const data = response.data.messages.splice(0,response.data.messages.length); 
+      console.log(photo);
+      this.setState({ texts: data, image: photo }
+      );
+    });
     }
 
   render() { 

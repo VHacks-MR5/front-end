@@ -25,7 +25,8 @@ class LookingForm extends React.Component {
       person_gender: '', 
       person_nationality:'', 
       person_nname:'', 
-      person_location: ''
+      person_location: '', 
+      person_file:''
       };
 
     this.myFirstNameChange = this.myFirstNameChange.bind(this);
@@ -91,12 +92,13 @@ class LookingForm extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        image: this.my_image,
-        first_name: this.my_name,
-        last_name: this.my_last_name
+        image: this.state.person_image,
+        first_name: this.state.my_name,
+        last_name: this.state.my_last_name
       })
     }).then((res) => {
-      console.log("this is res", res)
+      console.log("this is res", res);
+      console.log(this.state.person_image);
     }).catch((err) => {
       console.log(err)
     });
@@ -107,8 +109,11 @@ class LookingForm extends React.Component {
         this.setState({my_screenshot: imageScreenshot, my_image: imageScreenshot.split(/,(.+)/)[1]});
   }
 
-  imagePersonCallback = (imageScreenshot) => {
-      this.setState({person_image: imageScreenshot[0].preview});
+  imagePersonCallback = (imageScreenshot) => { 
+      console.log(imageScreenshot);
+      var split = imageScreenshot.preview.split('/'); 
+      var size  = split.length;
+      this.setState({person_image: imageScreenshot.preview, person_file: split[size-1]});
   }
 /**my_email: this.my_email,
         my_phone: this.my_phone,
@@ -121,7 +126,7 @@ class LookingForm extends React.Component {
         person_location: this.person_location**/
   render() { 
     if (this.state.submitted){
-      return <ResultsList />
+      return <ResultsList url={this.state.person_file} />
     } else {
     return (
       <form onSubmit={this.handleSubmit} className=""> 
@@ -150,7 +155,7 @@ class LookingForm extends React.Component {
               <input className="mdl-textfield__input answer" type="text" name="phone" placeholder="Country last seen in" onChange={this.personLastSeenChange}/>
               <UploadImage callbackFromParent={this.imagePersonCallback}/> 
               {this.state.person_image ? <div><p> This is the image that will be submitted</p><img src={this.state.person_image} /></div> : null}
-            </div>
+              </div>
             </Col>
           </Row>
         </Container>

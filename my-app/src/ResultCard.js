@@ -7,7 +7,7 @@ class ResultCard extends React.Component {
     super(props);
 
     this.state = {
-      texts:[], 
+      match_score:[], 
       image:''
     };
   }
