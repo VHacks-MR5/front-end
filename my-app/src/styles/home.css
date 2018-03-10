@@ -1,46 +1,102 @@
 @import 'colors.css';
 
 .home {
-	background-color: white;
+  background-color: white;
 }
 
-.welcome {
-	height: 1000px; width: auto;
-	background-color: var(--light-teal);
+.title-container {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.title {
+  font-size: 120px;
+  color: white;
+  margin-bottom: 200px;
+}
+
+.subtitle {
+  font-size: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+  color: white;
+  margin-bottom: 70px;
+}
+
+.demo {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 8px;
+  background-color: var(--dark-grey);
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.demo:hover {
+  text-decoration: none;
+  color: green;
+  background-color: white;
+  border-color: green;
+  -webkit-transition: 0.7s; /* Safari */
+  transition: 0.7s;
 }
 
 .hugs {
-	max-width: 100%;
-	width: 100%;
-	height: auto;
-	margin: auto;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	opacity: 0.7;
-	filter: brightness(50%);
-	-webkit-filter: brightness(50%);
-	/*-webkit-filter: blur(5px);*/
-}
-
-img.bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-	
-  /* Set up proportionate scaling */
+  background-image: url('../img/hugs/hugs_background.png');
+  max-width: 100%;
+  max-height: 100%;
   width: 100%;
-  height: auto;
-	
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+  height: 800px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
+.noPadding {
+  padding: 0px;
+}
+
+.welcome {
+  height: 800px; width: auto;
+  background-color: var(--light-teal);
+  color: var(--light-teal);
+  align-items: center;
+  justify-content: center;
+}
+
+.child {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  height: 350px; width: auto;
+  border: 1px solid var(--dark-grey);
+  border-radius: 5px;
+  float: right;
+}
+
+.welcome-text {
+  float: left;
+  color: var(--dark-grey);
+  width: 500px;
+  padding: 30px 20px 30px 20px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.welcome-title {
+  font-family:'Cinzel', serif;
+  font-size: 50px;
+  margin-bottom: 60px;
+}
+
+.welcome-description {
+  font-size: 20px;
 }
