@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router'
+//import { BrowserRouter } from 'react-router-dom'
 import './styles/index.css';
-import App from './App';
+import Home from './Home';
+import Form from './Form';
+//import Results from './Results';
 import CaptureImage from './CaptureImage';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render((
+	<Router history={hashHistory}>
+		<Route path="/" component={Home}/>
+		<Route path="/form" component={Form}/>
+	</Router>
+  ), document.getElementById('root'))
 
 
 // ReactDOM.render() {

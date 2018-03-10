@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import 'colors.css';
+
+.header {
+  background-color: var(--light-teal);
+  height: 120px;
+  padding: 20px;
+  color: white;
+}
+
+.header-home {
+  background-color: white;
+  color: var(--light-teal);
+  height: 150px;
+}
+
+.header-logo-container {
+  align-items: inline;
+  vertical-align: center;
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
+.header-logo {
+  height: 80px; width: auto;
+  float: left;
+}
+
+.header-title {
+  font-family:'Cinzel', serif;
+  font-size: 2.5em; 
+  margin-left: 20px;
+  float: left;
+}
+
+.nav {
+  margin-top: 30px;
+  margin-right: 300px;
+  float: right;
+}
+
+.nav-item {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+.nav-item:hover {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+.nav-item-home {
+  color: var(--dark-grey);
+}
+
+.nav-item-home:hover {
+  color: var(--light-teal);
+}

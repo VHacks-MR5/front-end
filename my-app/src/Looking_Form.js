@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CaptureImage from './CaptureImage';
 import UploadImage from './UploadImage';
-import './styles/CaptureImage.css';
+import './styles/captureImage.css';
 import { Container, Row, Col } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 var base64Img = require('base64-img');
@@ -123,15 +123,12 @@ class LookingForm extends React.Component {
         <Row>
           <Col sm="6">
             <h4>Your information:</h4>
-            <br />
-            First Name: <input type="text" value={this.state.my_name} onChange={this.myFirstNameChange} />
-            <br />
-            Last Name: <input type="text" value={this.state.my_last_name} onChange={this.myLastNameChange} />
-            <br />
-            Email Address: <input type="text" value={this.state.my_email} onChange={this.myEmailChange} />
-            <br />
-            Phone Number: <input type="text" value={this.state.my_number} onChange={this.myPhoneChange} />
-            <br />
+            <div class="credentials-input">
+              <input class="mdl-textfield__input answer" type="text" name="firstName" placeholder="First Name" onChange={this.myFirstNameChange}/>
+              <input class="mdl-textfield__input answer" type="text" name="lastName" placeholder="Last Name" onChange={this.myLastNameChange}/>
+              <input class="mdl-textfield__input answer" type="text" name="email" placeholder="Email" onChange={this.myEmailChange}/>
+              <input class="mdl-textfield__input answer" type="text" name="phone" placeholder="Phone #" onChange={this.myPhoneChange}/>
+            </div>
             <CaptureImage callbackFromParent={this.imageMeCallback}/> 
             <br />
             </Col>
@@ -150,7 +147,7 @@ class LookingForm extends React.Component {
           </Col>
           </Row>
         </Container>
-        <input type="submit" value="Submit" />
+        <input className="btn" type="submit" value="Submit" />
         {this.state.my_screenshot ? <div><p> This is the image that will be submitted. If you would like to retake the photo, simply re-capture the photo</p><img src={this.state.my_screenshot} /></div> : null}
    
       </form>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Webcam from 'react-webcam';
-import './styles/CaptureImage.css';
+import './styles/App.css';
+import './styles/captureImage.css';
 
 class CaptureImage extends React.Component {
 
@@ -33,7 +34,7 @@ class CaptureImage extends React.Component {
           width={350} />
       </div>
       <div>
-     <button className="capimage"  onClick={this.capture} >Capture photo</button>
+     <button className="btn capimage"  onClick={this.capture} >Capture photo</button>
      </div>
      </div>
      );

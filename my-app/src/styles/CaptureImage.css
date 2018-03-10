@@ -1,3 +1,5 @@
+@import 'colors.css';
+
 .capimage{
 	position: relative;
 }
@@ -8,4 +10,41 @@ input{
 
 h4{
 	padding-top: 20px;
+}
+
+.mdl-textfield__input {
+  border: none;
+  border-bottom: 1px solid var(--dark-grey);
+  display: block;
+  margin: 0;
+  padding: 5px 0;
+  width: 300px;
+  background: none;
+  text-align: left;
+  color: inherit;
+}
+
+.mdl-textfield__input:focused {
+  outline: none;
+}
+
+.mdl-textfield__input:invalid {
+  border-color: red;
+  box-shadow: none;
+}
+
+.credentials-input {
+  float: center;
+  display: inline-block;
+  vertical-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.answer {
+  margin-bottom: 30px;
+  outline: none;
 }
