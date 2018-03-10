@@ -1,0 +1,28 @@
+@import 'colors.css';
+
+.footer {
+  background-color: var(--light-teal);
+  height: 150px; width: auto;
+  padding: 20px;
+  color: white;
+  display: inline-block;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.footer-logo-container {
+  align-items: inline;
+  vertical-align: center;
+  float: left;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.footer-logo {
+  height: 30px; width: auto;
+}
+
+.footer-info {
+  float: right;
+  margin-top: 20px;
+  margin-left: 50px;
+}

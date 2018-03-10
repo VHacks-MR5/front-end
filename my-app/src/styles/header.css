@@ -3,7 +3,7 @@
 
 .header {
   background-color: var(--light-teal);
-  height: 120px;
+  height: 150px;
   padding: 20px;
   color: white;
 }
@@ -57,4 +57,9 @@
 
 .nav-item-home:hover {
   color: var(--light-teal);
+}
+
+footer {
+  background-color: var(--dark-grey);
+  color: white;
 }

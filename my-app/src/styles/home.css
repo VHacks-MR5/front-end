@@ -64,7 +64,7 @@
 }
 
 .welcome {
-  height: 800px; width: auto;
+  height: 675px; width: auto;
   background-color: var(--light-teal);
   color: var(--light-teal);
   align-items: center;
@@ -99,4 +99,67 @@
 
 .welcome-description {
   font-size: 20px;
+}
+
+.mobile {
+  height: 800px;
+  padding-top: 150px;
+  padding-left: 300px;
+  padding-right: 300px;
+  display: inline-block;
+}
+
+.mobile-text {
+  float: left;
+  width: 550px;
+  margin-right: 50px;
+}
+
+.phones {
+  float: left;
+  margin-top: 80px;
+}
+
+.flipphone {
+  height: 150px; width: auto;
+  margin-left: 100px;
+}
+
+.smartphone {
+  height: 150px; width: auto;
+  margin-left: 150px;
+}
+
+.div1 {
+  background-image: url('../img/pixel.jpg');
+  width: 310px;
+  height: 650px;
+  padding-bottom: 5px;
+  position:relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.div2 {
+  max-height: 100%;
+  overflow: auto;
+  padding: 20px 15px;
+}
+
+.div3 {
+  height: 878px;
+  width: 280px;
+  margin-top: 5px;
+  padding-top: 5px;
+  overflow-y: hidden;
+}
+
+.div4 {
+  background-image: url('../img/screenshot.jpg');
+  height: 878px;
+  width: 280px;
+  border-radius: 10px;
+  overflow-y: hidden;
 }

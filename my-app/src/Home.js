@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import {Router, Route, Link, RouteHandler} from 'react-router';
 import { Container, Row, Col } from 'reactstrap';
 import child from './img/child.jpeg';
+import flipphone from './img/flipphone.png';
+import smartphone from './img/smartphone.png';
+import screenshot from './img/screenshot.jpg';
 import './styles/App.css';
 import './styles/home.css';
 import { HeaderHome } from './Headers.js';
+import Footer from './Footer.js';
 
 
 class Home extends Component {
@@ -42,8 +46,24 @@ render() {
           </Container>
         </div>
 
-        <div className="mission">
+        <div className="mobile">
+            <div className="mobile-text">
+              <h3 className="welcome-title">Device Diversity.</h3>
+              <p className="welcome-description">Our platform works across all devices. Use our webpage on desktop or mobile to upload images. Or, use our ChatBot to walk you through the process and give you the results.</p> 
+              <div className="phones">
+                <img src={flipphone} className="flipphone"/>
+                <img src={smartphone} className="smartphone"/>
+              </div>
+            </div>
+            <div id="div1" className="div1">
+              <div id="div2" className="div2">
+                  <div id="div3" className="div3">
+                    <div id="div4" className="div4"></div>
+                  </div>
+              </div>
+            </div>
         </div>
+        <Footer/>
       </div>
     );
   }

@@ -17,8 +17,7 @@ class UploadImage extends React.Component {
 
   onImageDrop = (file) => {
     const screenshot = file;
-    var split = file[0].preview.split('/'); 
-    var size  = split.length;
+    
     this.props.callbackFromParent(file[0]);
   }
 

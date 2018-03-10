@@ -10,6 +10,11 @@ input{
 
 h4{
 	padding-top: 20px;
+  color: var(--dark-grey);
+}
+
+.stripe {
+  border-right: 1px solid grey;
 }
 
 .mdl-textfield__input {
@@ -41,10 +46,31 @@ h4{
   justify-content: center;
   text-align: center;
   width: 300px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
 .answer {
   margin-bottom: 30px;
   outline: none;
+}
+
+.submit {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 8px;
+  background-color: var(--dark-grey);
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.submit:hover {
+  text-decoration: none;
+  color: green;
+  background-color: white;
+  border-color: green;
+  -webkit-transition: 0.7s; /* Safari */
+  transition: 0.7s;
 }
