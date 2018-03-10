@@ -11,8 +11,13 @@
   font-size: large;
 }
 
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .btn {
-  font-size: 1em;
+  font-size: 18px;
   padding: 8px;
   margin-top: 5px;
   color: var(--dark-grey);
@@ -29,8 +34,11 @@
   cursor: pointer;
 }
 
+.btn-large {
+  font-size: 30px;
+}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.btn-shaded {
+  background-color: var(--dark-grey);
+  color: white;
 }
