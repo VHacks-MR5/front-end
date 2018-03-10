@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-class Results extends React.Component {
+class ResultsList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -42,4 +42,4 @@ componentDidMount(){
   }
 }
 
-export default Results;
+export default ResultsList;
