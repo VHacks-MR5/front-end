@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import {Router, Route, Link, RouteHandler} from 'react-router';
-import logo from './img/vatican.png';
-import './App.css';
+import './styles/App.css';
+import { Header } from './Headers';
 import CaptureImage from './CaptureImage';
-import UploadImage from './UploadImage';
 import LookingForm from './Looking_Form';
+import UploadImage from './UploadImage';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 //form, input pictures, info whatever 
 //post to same page
 //flask: if post: return template (page), gives context
 
 
-class App extends Component {
-
-  
-
+class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,17 +38,11 @@ render() {
     var hashHistory = Router.hashHistory;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Vinculum</h1>
-        </header> 
-
+      <Header/>
       <LookingForm />
-
-        
       </div>
     );
   }
 }
 
-export default App;
+export default Form;
