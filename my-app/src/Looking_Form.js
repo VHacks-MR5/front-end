@@ -127,7 +127,7 @@ class LookingForm extends React.Component {
       <form onSubmit={this.handleSubmit} className=""> 
         <Container> 
         <Row>
-          <Col sm="6">
+          <Col sm="6" className="stripe">
             <h4>Your information:</h4>
             <div className="credentials-input">
               <input className="mdl-textfield__input answer" type="text" name="firstName" placeholder="First Name" onChange={this.myFirstNameChange}/>
@@ -154,7 +154,7 @@ class LookingForm extends React.Component {
             </Col>
           </Row>
         </Container>
-        <input className="btn" type="submit" value="Submit" />
+        <input className="btn submit" type="submit" value="Submit" />
         
    
       </form>

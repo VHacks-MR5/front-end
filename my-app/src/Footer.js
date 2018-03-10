@@ -18,8 +18,8 @@ class Footer extends React.Component {
           <h1 className="footer-title">Vinculum</h1>
         </div>
         <div className="footer-info">
-          <p>Competitor</p>
-          <p>@VHacks 2018</p>
+          <p>franklify@gmail.com</p>
+          <p>VHacks 2018</p>
         </div>
       </footer>
   	)
