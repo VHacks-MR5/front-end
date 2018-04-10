@@ -1,0 +1,28 @@
+.loading {
+	margin-top: 100px;
+}
+
+.loading-gif {
+	width: 400px; height: auto;
+	border-radius: 200px;
+	margin-bottom: 20px;
+}
+
+.loading-text {
+	font-size: 30px;
+	color: var(--dark-grey);
+}
+
+.image-styling {
+	width:40%;
+	height:50%;
+}
+
+.header-link{
+	text-align: center;
+}
+
+.center-align{
+	margin-left: 35%;
+	margin-bottom: 0px;
+}
