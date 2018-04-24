@@ -15,11 +15,9 @@ class Footer extends React.Component {
   		<footer className="footer">
         <div className="footer-logo-container">
           <img src={logoWhite} className="footer-logo" alt="logo" />
-          <h1 className="footer-title">Vinculum</h1>
         </div>
-        <div className="footer-info">
-          <p>franklify@gmail.com</p>
-          <p>VHacks 2018</p>
+        <div>
+        <h5 className="footer-title" align="center">@Vinculum 2018</h5>
         </div>
       </footer>
   	)

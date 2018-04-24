@@ -4,7 +4,8 @@ import { Router, Route, hashHistory } from 'react-router'
 //import { BrowserRouter } from 'react-router-dom'
 import './styles/index.css';
 import Home from './Home';
-import Form from './Form';
+import Form from './Form'; 
+import About from './About';
 //import Results from './Results';
 import CaptureImage from './CaptureImage';
 import registerServiceWorker from './registerServiceWorker';
@@ -12,6 +13,7 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render((
 	<Router history={hashHistory}>
 		<Route path="/" component={Home}/>
+		<Route path="/about" component={About}/>
 		<Route path="/form" component={Form}/>
 	</Router>
   ), document.getElementById('root'))

@@ -1,7 +1,9 @@
 @import 'colors.css';
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic');
 
 .home {
   background-color: white;
+  font-family: 'Gentium Book Basic', serif;
 }
 
 .title-container {

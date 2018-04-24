@@ -1,28 +1,37 @@
 @import 'colors.css';
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic'); 
 
 .footer {
   background-color: var(--light-teal);
-  height: 150px; width: auto;
-  padding: 20px;
+  font-family: 'Gentium Book Basic', serif;
+  width: auto;
+  padding: 20px; 
   color: white;
   display: inline-block;
-  border-radius: 0px 20px 20px 0px;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:80px;
+  width:100%;
+  position:relative;
 }
 
 .footer-logo-container {
-  align-items: inline;
+  align-items: inline-block;
   vertical-align: center;
   float: left;
-  margin-left: 100px;
-  margin-top: 20px;
 }
 
 .footer-logo {
-  height: 30px; width: auto;
+  height: 40px; 
+  width: auto;  
+  top: 55px;
+  margin-bottom: 15px;
 }
 
 .footer-info {
-  float: right;
-  margin-top: 20px;
+  font-family: 'Gentium Book Basic', serif; 
+  margin-top: 5px;
   margin-left: 50px;
+  margin-bottom: 20px;
 }

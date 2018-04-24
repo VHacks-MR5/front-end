@@ -39,7 +39,7 @@ render() {
           <Col className="noPadding">
           <div className="welcome-text">
             <h3 className="welcome-title">To the Rescue.</h3>
-            <p className="welcome-description">Using Microsoft's Face API, we are able to search the global refugee database for the face of a missing person. Just provide a headshot of an individual and we'll tell you where you can find them.</p>
+            <p className="welcome-description">Using Microsoft's Cognitiv Vision API, we are able to search the global refugee database for the face of a missing person. Just provide a headshot of an individual and we'll tell you where you can find them.</p>
           </div> 
           </Col> 
           </Row>

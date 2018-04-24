@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic'); 
 @import 'colors.css';
 
 .App {
   text-align: center; 
   background-color: white; 
   height:100%;
+  font-family: 'Gentium Book Basic', serif;
 }
 
 .App-intro {
   font-size: large;
+  font-family: 'Gentium Book Basic', serif;
+  
 }
 
 @keyframes App-logo-spin {
