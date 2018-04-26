@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import './styles/results.css';
 import loading from './img/loading.gif';
+import Footer from './Footer';
+import { Header } from './Headers';
 
 class ResultsList extends React.Component {
   constructor(props) {
@@ -30,19 +32,28 @@ componentDidMount(){
         .then( response => {
           this.setState({loading: false});
           const photo = response.data.messages.splice(-1,1)[0].attachment.payload.url; 
-          const data = response.data.messages.splice(0,response.data.messages.length); 
-          this.setState({ texts: data, image: photo }
-          );
-        });
-        console.log('got it');
+          const data = response.data.messages.splice(0,response.data.messages.length-1);  
+          const score = data[0].text.substring(data[0].text.length-3,data[0].text.length);
+          this.setState({ texts: score, image: photo });
+       }) 
     }
 
+//More rendering stuff
+ // {this.state.texts.map(function(object,i) {
+ //            return ( 
+ //              <div>
+ //                </div>
+ //            );
+ //          })}
   render() { 
     if (this.state.loading) {
-      return (
-        <div className="loading">
-          <img src={loading} className="loading-gif"/>
-          <div className="loading-text"> Searching...</div>
+      return ( 
+        <div>
+          <div className="loading">
+            <img src={loading} className="loading-gif"/>
+            <div className="loading-text"> Searching...</div>
+          </div>
+          <Footer/>
         </div>
       )
     } else {
@@ -50,14 +61,12 @@ componentDidMount(){
         <div>
           <h1>Results</h1> 
           <img src={this.state.image} className="image-styling" />
-          <div>
-          {this.state.texts.map(function(object,i) {
-          return (
-            <p key={i}>{object.text}</p>
-          );
-        })}
+          <div className="text-styling">
+          <h5>The similiarity score between this photo and the photo you submitted is {this.state.texts}</h5>
+          <h5>This photo was entered into the Interpol database on April 25th, 2018.</h5>
+          <h5>Think this is your missing relative? Contact us and we can give you more information</h5>
           </div> 
-          
+          <Footer/>
         </div>
       );
     }

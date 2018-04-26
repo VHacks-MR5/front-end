@@ -15,16 +15,19 @@ export class HeaderHome extends React.Component {
 
   render() {
   	return (
+    <div>
 		<header className="header header-home">
       <div className="header-logo-container">
         <img src={logoWhite} className="header-logo" alt="logo" />
       </div>
+      <h1 className="header-title">Vinculum</h1>
       <div className="nav">
         <Link to="/" className="nav-item nav-item-home">Home</Link>
         <Link to="/about" className="nav-item nav-item-home">About</Link>
         <Link to="/form" className="nav-item nav-item-home">Search People</Link>
       </div>
     </header>
+    </div>
 	)
   }
 }
@@ -38,16 +41,19 @@ export class Header extends React.Component {
 
   render() {
     return (
+    <div>
     <header className="header">
       <div className="header-logo-container">
         <img src={logoWhite} className="header-logo" alt="logo" />
       </div>
+      <h1 className="header-title">Vinculum</h1>
       <div className="nav">
         <Link to="/" className="nav-item">Home</Link>
         <Link to="/about" className="nav-item">About</Link>
         <Link to="/form" className="nav-item">Search People</Link>
       </div>
     </header>
+    </div>
   )
   }
 }

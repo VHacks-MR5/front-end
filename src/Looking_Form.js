@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import {Router, Route, Link, RouteHandler} from 'react-router';
 import CaptureImage from './CaptureImage';
 import UploadImage from './UploadImage';
 import ResultsList from './ResultsList';
+import About from './About';
 import './styles/CaptureImage.css';
 import { Container, Row, Col } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -97,8 +99,7 @@ class LookingForm extends React.Component {
     this.setState({personImageUrl: event.target.value});
   }
 
-  validateUrl(value) { 
-      console.log(value);
+  validateUrl(value) {
       return /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(value);
   }
 
@@ -141,6 +142,11 @@ class LookingForm extends React.Component {
       var size  = split.length;
       this.setState({person_image: imageScreenshot.preview, person_file: split[size-1]});
   }
+
+  handleClick(e) {
+    console.log('this is:', this);
+  }
+
 /**my_email: this.my_email,
         my_phone: this.my_phone,
         person_image: this.person_image,
@@ -150,6 +156,7 @@ class LookingForm extends React.Component {
         person_nationality:this.person_nationality, 
         person_nname:this.person_nname, 
         person_location: this.person_location**/
+
   render() { 
     if (this.state.submitted){
       return (<ResultsList url={this.state.personImageUrl}/>)
@@ -160,7 +167,7 @@ class LookingForm extends React.Component {
         <br />
         <h5>Please enter the url of a publically hosted image</h5>
         <input className="mdl-textfield__input answer center-align" type="text" name="photo" placeholder="Link to image url" onChange={this.personImageUrl} required/> 
-        <input className="btn submit" type="submit" disabled={!this.state.validUrl} value="Submit" />
+        <input className="btn submit" type="submit"disabled={!this.state.validUrl} value="Submit" />
         <Row>
          <h4>These fields are currently not used for search purposes. Future development will implement search via text and image input.</h4>
           <Col sm="6" className="stripe"> 
@@ -195,7 +202,7 @@ class LookingForm extends React.Component {
    
       </form>
     );}
-  }
+}
 }
 //Code for image uploading. Currently can't use it cause we aren't storing pics in a database
               
