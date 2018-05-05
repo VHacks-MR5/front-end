@@ -63,7 +63,7 @@ componentDidMount(){
           <img src={this.state.image} className="image-styling" />
           <div className="text-styling">
           <h5>The similiarity score between this photo and the photo you submitted is {this.state.texts}</h5>
-          <h5>This photo was entered into the Interpol database on April 25th, 2018.</h5>
+          <h5>This photo was entered into the Interpol database on May 5th, 2018.</h5>
           <h5>Think this is your missing relative? Contact us and we can give you more information</h5>
           </div> 
           <Footer/>

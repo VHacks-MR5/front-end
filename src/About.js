@@ -28,9 +28,10 @@ render() {
       <div className="App">
       <Header/> 
       <h1 className="about-headers">Our Story</h1>  
-      <p className="story">Team Vinculum was formed as a result of VHacks, the first hackathon to take place in Vatican City in March 2018. 
-      Our team consists of 6 people, each with very unique backgrounds, who quickly bonded over our drive to develop technology for humanitarian purposes.
-      Although many projects remain untouched after a hackathon, our team decided to stick together because we want to expand the technology and reach of this application. We hope that with the right help, Vinculum can be successfully used by families to find their missing loved ones and reunite people, one match at a time.
+      <p className="story">Our was formed during VHacks, the first hackathon to take place in Vatican City in March 2018. 
+      Our team consists of 6 people from 3 countries and very unique backgrounds. We quickly bonded over our drive to develop technology for humanitarian purposes and as a result, Vinculum was created.
+      Although many projects remain untouched after a hackathon, our team decided to stick together because we want to expand the technology and reach of this application. 
+      We hope that with the right help, Vinculum can be successfully used by families to find their missing loved ones and reunite people, one match at a time.
       </p>
       <img src={team} className="team"/> 
       <p>Team Vinculum during VHacks-2018 demos </p>
@@ -50,9 +51,9 @@ render() {
       </div>
       <h1 className="about-headers">Recognitions</h1> 
       <ul>
-        <li>Third Place: Migrants and Refugees category - VHacks 2018</li>
-        <li>Audience Choice Award - VHacks 2018</li> 
         <li>US Finalist - Microsoft Imagine Cup 2018</li>
+        <li>Audience Choice Award - VHacks 2018</li> 
+        <li>Third Place: Migrants and Refugees category - VHacks 2018</li>
       </ul>
       <h1 className="about-headers">In The Media</h1>
       <ul>
