@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
+
+:root {
+	--serif: 'Playfair Display', serif;
+	--sans-serif: 'Raleway', sans-serif;
+}

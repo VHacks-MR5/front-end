@@ -26,7 +26,7 @@ componentWillMount() {
 
 componentDidMount(){ 
         console.log('tryna get');
-        axios.get("https://cors-anywhere.herokuapp.com/" + "http://52.170.250.135:5000/match/app?url="+this.state.uploaded_image,
+        axios.get("https://cors-anywhere.herokuapp.com/" + "http://23.101.170.100:5000/match/app?url="+this.state.uploaded_image,
           'headers':{
         'Access-Control-Allow-Origin':'*'})
         .then( response => {

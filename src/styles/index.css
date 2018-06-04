@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic');
+@import 'font.css';
 @import 'colors.css';
 
 body {
   margin: 0;
   padding: 0;
   background-color: var(--dark-grey);
-  font-family: 'Gentium Book Basic', serif;
+  font-family:var(--sans-serif);
 }
 
 
@@ -15,7 +15,7 @@ body {
 	position: inline; 
 	margin: 75px 50px 50px 50px; 
 	font-size: 1.5em;
-	font-family: 'Gentium Book Basic', serif;
+	font-family:var(--serif);
 }
 
 .MainPage:hover{

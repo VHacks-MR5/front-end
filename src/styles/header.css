@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic');
-@import 'colors.css';
+@import 'colors.css'; 
+@import 'font.css';
 
 .header {
   background-color: var(--light-teal);
   height: 150px;
   padding: 20px;
   color: white;
-  font-family: 'Gentium Book Basic', serif;
+  font-family: var(--serif);
 }
 
 .header-home {
@@ -30,7 +29,7 @@
 }
 
 .header-title {
-  font-family: 'Gentium Book Basic', serif;
+  font-family: var(--serif);
   font-size: 2.5em;
   margin-top: 20px; 
   margin-left: 20px;
@@ -66,5 +65,5 @@
 footer {
   background-color: var(--dark-grey);
   color: white;
-  font-family: 'Gentium Book Basic', serif;
+  font-family: var(--sans-serif);
 }

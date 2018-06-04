@@ -1,9 +1,9 @@
 @import 'colors.css';
-@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic');
+@import 'font.css';
 
 .home {
   background-color: white;
-  font-family: 'Gentium Book Basic', serif;
+  font-family: var(--serif);
 }
 
 .title-container {
@@ -23,6 +23,7 @@
   margin-right: 200px;
   color: white;
   margin-bottom: 70px;
+  font-family: var(--sans-serif);
 }
 
 .demo {
@@ -94,13 +95,14 @@
 }
 
 .welcome-title {
-  font-family:'Cinzel', serif;
+  font-family:var(--serif);
   font-size: 50px;
   margin-bottom: 60px;
 }
 
 .welcome-description {
   font-size: 20px;
+  font-family:var(--sans-serif);
 }
 
 .mobile {
@@ -132,6 +134,24 @@
   margin-left: 150px;
 }
 
+.globe {
+  height: 150px; width: auto;
+  margin-left: 100px;
+  vertical-align: middle;
+}
+
+.lock {
+  height: 150px; width: auto;
+  margin-left: 150px;
+  vertical-align: middle;
+}
+.text2 {
+  vertical-align: top;
+  font-size: 24px;
+}
+.img-valign {
+  vertical-align: bottom;
+}
 .div1 {
   background-image: url('../img/pixel.jpg');
   width: 310px;

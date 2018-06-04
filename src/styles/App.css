@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic'); 
 @import 'colors.css';
+@import 'font.css';
 
 .App {
   text-align: center; 
   background-color: white; 
   height:100%;
-  font-family: 'Gentium Book Basic', serif;
+  font-family:var(--serif);
 }
 
 .App-intro {
   font-size: large;
-  font-family: 'Gentium Book Basic', serif;
+  font-family:var(--serif);
   
 }
 

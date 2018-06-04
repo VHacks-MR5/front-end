@@ -1,9 +1,9 @@
 @import 'colors.css';
-@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic'); 
+@import 'font.css';
 
 .footer {
   background-color: var(--light-teal);
-  font-family: 'Gentium Book Basic', serif;
+  font-family:var(--sans-serif);
   width: auto;
   padding: 20px; 
   color: white;
@@ -30,7 +30,7 @@
 }
 
 .footer-info {
-  font-family: 'Gentium Book Basic', serif; 
+  font-family:var(--sans-serif); 
   margin-top: 5px;
   margin-left: 50px;
   margin-bottom: 20px;

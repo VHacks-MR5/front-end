@@ -14,6 +14,14 @@ import rachana from './img/rachana.jpg';
 import loading from './img/loading.gif';
 import Footer from './Footer';
 import { Header } from './Headers';
+import ImageGallery from 'react-image-gallery';
+//SCSS
+import "../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
+
+//CSS
+import "../node_modules/react-image-gallery/styles/css/image-gallery.css";
+
+
 
 class About extends React.Component {
   constructor(props) {
@@ -23,17 +31,17 @@ class About extends React.Component {
 
 
 render() {
-    var hashHistory = Router.hashHistory;
+    var hashHistory = Router.hashHistory; 
     return (
       <div className="App">
       <Header/> 
       <h1 className="about-headers">Our Story</h1>  
-      <p className="story">Our was formed during VHacks, the first hackathon to take place in Vatican City in March 2018. 
+      <p className="story">Vinculum was formed during VHacks, the first hackathon to take place in Vatican City in March 2018. 
       Our team consists of 6 people from 3 countries and very unique backgrounds. We quickly bonded over our drive to develop technology for humanitarian purposes and as a result, Vinculum was created.
       Although many projects remain untouched after a hackathon, our team decided to stick together because we want to expand the technology and reach of this application. 
-      We hope that with the right help, Vinculum can be successfully used by families to find their missing loved ones and reunite people, one match at a time.
+      As we continue to develop and build, we hope that Vinculum can be successfully used by families to find their missing loved ones and reunite people, one match at a time.
       </p>
-      <img src={team} className="team"/> 
+      <img src={team} className="team"/>
       <p>Team Vinculum during VHacks-2018 demos </p>
       <h1 className="about-headers">Our Team</h1>  
       <div align="center">
@@ -51,15 +59,16 @@ render() {
       </div>
       <h1 className="about-headers">Recognitions</h1> 
       <ul>
-        <li>US Finalist - Microsoft Imagine Cup 2018</li>
+        <li>5th place - US Finals, Microsoft Imagine Cup 2018</li>
         <li>Audience Choice Award - VHacks 2018</li> 
         <li>Third Place: Migrants and Refugees category - VHacks 2018</li>
       </ul>
       <h1 className="about-headers">In The Media</h1>
       <ul>
-            <li><a href="https://blogs.msdn.microsoft.com/microsoftimagine/2018/04/05/students-hack-for-social-good-first-ever-vatican-hacks/"> Students hack for social good - Microsoft Blog </a> </li>
-            <li><a href="https://blogs.msdn.microsoft.com/microsoftimagine/2018/04/16/here-are-the-2018-us-imagine-cup-finalists-competing-for-10000/"> Imagine Cup US Finalists Announcement - Microsoft Blog</a> </li>
-          </ul>
+          <li><a href="https://blogs.msdn.microsoft.com/microsoftimagine/2018/05/06/2018-u-s-imagine-cup-winners-announced/"> Imagine Cup US Winners Announcement - Microsoft Blog</a> </li>
+          <li><a href="https://blogs.msdn.microsoft.com/microsoftimagine/2018/04/16/here-are-the-2018-us-imagine-cup-finalists-competing-for-10000/"> Imagine Cup US Finalists Announcement - Microsoft Blog</a> </li>
+          <li><a href="https://blogs.msdn.microsoft.com/microsoftimagine/2018/04/05/students-hack-for-social-good-first-ever-vatican-hacks/"> Students hack for social good - Microsoft Blog </a> </li>      
+      </ul>
       <h1 className="about-headers">Contact</h1> 
       <p align="center" className="contact">Reach us at lrachana [at] gmail [dot] com </p>
       <Footer /> 

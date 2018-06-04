@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic'); 
+@import 'font.css';
 
 
 .about-headers{
 	margin-top:40px;
-	font-family: 'Gentium Book Basic', serif;
+	font-family: var(--serif);;
 }
 
 ul, li {
-	font-family: 'Gentium Book Basic', serif;
+	font-family:var(--sans-serif);
 	font-size: 1.1em;
 	list-style-type: none;
 }
 
 p {
-   font-family: 'Gentium Book Basic', serif;
+   font-family:var(--sans-serif);
 }
 
 .team{

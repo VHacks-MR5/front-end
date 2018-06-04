@@ -1,3 +1,5 @@
+@import 'font.css';
+
 .loading {
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -12,6 +14,7 @@
 .loading-text {
 	font-size: 30px;
 	color: var(--dark-grey);
+	font-family:var(--sans-serif);
 }
 
 .image-styling {
@@ -21,18 +24,22 @@
 
 .header-link{
 	text-align: center;
+	font-family:var(--sans-serif);
 }
 
 .center-align{
 	margin-left: 35%;
 	margin-bottom: 0px;
+	font-family:var(--sans-serif);
 }
 
 h1 {
 	margin-top: 50px;
+	font-family:var(--serif);
 }
 
 .text-styling{ 
 	margin-top: 50px;
 	margin-bottom: 50px;
+	font-family:var(--sans-serif);
 }

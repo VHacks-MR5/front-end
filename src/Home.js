@@ -5,11 +5,25 @@ import child from './img/child.jpeg';
 import flipphone from './img/flipphone.png';
 import smartphone from './img/smartphone.png';
 import screenshot from './img/screenshot.jpg';
+import globe from './img/globe.png';
+import lock from './img/lock.png';
 import './styles/App.css';
 import './styles/home.css';
 import { HeaderHome } from './Headers.js';
 import Footer from './Footer.js';
 
+
+
+        // <div className="mobile">
+        //   <h3 className="welcome-title">Platform</h3>
+  
+        //   <img className="img-valign" src={globe} />
+        //   <span className="text2">Open Access</span>
+        //   <br />
+        //   <span className="text2">Safety</span>
+        //   <img className="img-valign" src={lock} />
+          
+        // </div>
 
 class Home extends Component {
   constructor(props) {
@@ -38,13 +52,15 @@ render() {
           </Col> 
           <Col className="noPadding">
           <div className="welcome-text">
-            <h3 className="welcome-title">To the Rescue.</h3>
-            <p className="welcome-description">Using Microsoft's Cognitiv Vision API, we are able to search the global refugee database for the face of a missing person. Just provide a headshot of an individual and we'll tell you where you can find them.</p>
+            <h3 className="welcome-title">To the Rescue</h3>
+            <p className="welcome-description">With the aid of Microsoft's Cognitive Vision API, we are able to search  for the face of a missing person. Just provide a headshot of an individual and we'll tell you where you can find them.</p>
           </div> 
           </Col> 
           </Row>
           </Container>
-        </div>
+        </div> 
+
+
 
         <div className="mobile">
             <div className="mobile-text">
