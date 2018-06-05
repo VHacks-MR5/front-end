@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
+
 :root {
 	--light-teal: #001a33;
 	--greenish: #56a50b;
@@ -7,4 +9,7 @@
 	/* greys */
 	--light-grey: #949BA0;
 	--dark-grey: #555;
+
+	--serif: 'Playfair Display', serif;
+	--sans-serif: 'Raleway', sans-serif;
 }
