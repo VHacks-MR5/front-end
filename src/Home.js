@@ -5,8 +5,8 @@ import child from './img/child.jpeg';
 import flipphone from './img/flipphone.png';
 import smartphone from './img/smartphone.png';
 import screenshot from './img/screenshot.jpg';
-import globe from './img/globe.png';
-import lock from './img/lock.png';
+import globe from './img/globe-white.png';
+import lock from './img/lock-white.png';
 import './styles/App.css';
 import './styles/home.css';
 import { HeaderHome } from './Headers.js';
@@ -14,16 +14,7 @@ import Footer from './Footer.js';
 
 
 
-        // <div className="mobile">
-        //   <h3 className="welcome-title">Platform</h3>
-  
-        //   <img className="img-valign" src={globe} />
-        //   <span className="text2">Open Access</span>
-        //   <br />
-        //   <span className="text2">Safety</span>
-        //   <img className="img-valign" src={lock} />
-          
-        // </div>
+        
 
 class Home extends Component {
   constructor(props) {
@@ -60,7 +51,31 @@ render() {
           </Container>
         </div> 
 
-
+        <div className="platforms">  
+          <h3 className="welcome-title">Platform</h3>
+          <Container>
+          <Row>
+           <Col className="col-2">
+            <img className="img-valign-globe" src={globe} />
+            </Col> 
+            <Col className="col-10">
+              <p className="text2">Open Access</p>
+              <p className="platform-description">Vinculum can be used by anyone (refugees, NGO workers, law enforcement, etc.) as long they have access to the Internet. Our application is free to use and does not require any additional setup.</p>
+            </Col> 
+          </Row>
+          <Row>
+           <Col className="col-2">
+            <img className="img-valign-globe" src={lock} />
+            </Col> 
+            <Col className="col-10">
+              <p className="text2">Safety</p>
+              <p className="platform-description">
+              Vinculum has taken several measures to ensure user privacy. Users are not required to submit personal details and the results display the best matching photo and minimal information about the source of the photo. If a user believes they have found their loved one, they will be required to fill out an 'Apply to Contact' form. Once their identification has been verified, 
+              the user will be put in contact with their missing relative. </p>
+            </Col> 
+          </Row>
+          </Container>
+        </div>
 
         <div className="mobile">
             <div className="mobile-text">
