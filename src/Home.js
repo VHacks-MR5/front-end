@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import {Router, Route, Link, RouteHandler} from 'react-router';
 import { Container, Row, Col } from 'reactstrap';
 import child from './img/child.jpeg';
-import flipphone from './img/flipphone.png';
-import smartphone from './img/smartphone.png';
+import flipphone from './img/flipphone-blue.png';
+import smartphone from './img/smartphone-blue.png';
+import desktop from './img/desktop-blue.png';
 import screenshot from './img/screenshot.jpg';
 import globe from './img/globe-white.png';
 import lock from './img/lock-white.png';
@@ -78,13 +79,43 @@ render() {
         </div>
 
         <div className="mobile">
-            <div className="mobile-text">
+          <Container>
+ <Row>
               <h3 className="welcome-title">Device Diversity.</h3>
-              <p className="welcome-description">Our platform works across all devices. Use our webpage on desktop or mobile to upload images. Or, use our ChatBot to walk you through the process and give you the results.</p> 
-              <div className="phones">
-                <img src={flipphone} className="flipphone"/>
-                <img src={smartphone} className="smartphone"/>
-              </div>
+              <p className="platform-description ">Our platform works across all devices. Use our webpage on desktop or mobile to upload images. Or, use our ChatBot to walk you through the process and give you the results.</p> 
+            </Row>
+          </Container>
+            <div className="mobile-text"> 
+            <Container>
+           
+            <Row>
+              <Col className="col-2">
+              <img className="img-valign-globe" src={flipphone} />
+              </Col> 
+              <Col className="col-10">
+                <h4 className="noPadding">Basic Phone</h4>
+                <p>[This feature is currently not available to the public as we are undergoing development. We appreciate your patience.]</p>
+              </Col> 
+            </Row>
+            <Row>
+              <Col className="col-2">
+              <img className="img-valign-globe" src={smartphone} />
+              </Col> 
+              <Col className="col-10">
+                <h4 className="noPadding">Smartphone</h4>
+                <p>Head over to the <a href="http://m.me/202064163912158"> Messenger bot </a> on our Facebook page to upload images of yourself and test the software out. You must have a Facebook account to use this feature.</p>
+              </Col> 
+            </Row>
+            <Row>
+              <Col className="col-2">
+              <img className="img-valign-globe" src={desktop} />
+              </Col> 
+              <Col className="col-10">
+                <h4 className="noPadding">Desktop</h4>
+                <p>Click on the buttons above to get started!</p>
+              </Col> 
+            </Row>
+            </Container>
             </div>
             <div id="div1" className="div1">
               <div id="div2" className="div2">
@@ -95,6 +126,8 @@ render() {
             </div>
         </div>
         <Footer/>
+
+
       </div>
     );
   }

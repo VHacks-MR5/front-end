@@ -95,16 +95,17 @@
 .welcome-title {
   font-family:var(--serif);
   font-size: 50px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .welcome-description {
   font-size: 20px;
-  font-family:var(--sans-serif);
+  font-family:var(--sans-serif); 
+  margin-bottom: 40px;
 }
 
 .mobile {
-  height: 800px;
+  height: 1050px;
   padding-top: 150px;
   padding-left: 300px;
   padding-right: 300px;
@@ -112,7 +113,7 @@
 }
 
 .platforms{
-  height: 900px;
+  height: 850px;
   padding-top: 125px;
   padding-left: 300px;
   padding-right: 300px;
@@ -125,7 +126,8 @@
 .mobile-text {
   float: left;
   width: 550px;
-  margin-right: 50px;
+  margin-right: 50px; 
+  margin-top: 50px;
 }
 
 .phones {
@@ -154,19 +156,23 @@
   vertical-align: top;
   font-size: 20px; 
   font-weight: 200;
-  font-family: var(--sans-serif);
+  font-family: var(--sans-serif); 
+  margin-bottom: 40px;
 }
  
 .img-valign-lock{
   vertical-align: bottom; 
-  height: 9%; 
+  height: 50%; 
   width: auto;
-  margin-left: -5px;
-  margin-right: 5px;
+  margin-left: -15px;
 }
 
-.spacer {
-  height:100px;
+.shiftRight {
+  margin-right: 20px;
+}
+
+.left{
+  float: left;
 }
 
 .img-valign-globe{
@@ -175,25 +181,29 @@
   width: auto;
   margin-left: -10px;
 }
+
 .div1 {
-  background-image: url('../img/pixel.jpg');
+  background-image: url('../img/pixel.jpg'); 
+  display: inline-block;
   width: 310px;
-  height: 650px;
+  height: 625px;
   padding-bottom: 5px;
-  position:relative;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   overflow-y: hidden;
+  float: right;
 }
 
 .div2 {
+  display: inline-block;
   max-height: 100%;
   overflow: auto;
   padding: 20px 15px;
 }
 
 .div3 {
+  display: inline-block;
   height: 878px;
   width: 280px;
   margin-top: 5px;
@@ -202,6 +212,8 @@
 }
 
 .div4 {
+  display: inline-block;
+  display: inline-block;
   background-image: url('../img/screenshot.jpg');
   height: 878px;
   width: 280px;

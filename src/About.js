@@ -15,6 +15,7 @@ import loading from './img/loading.gif';
 import Footer from './Footer';
 import { Header } from './Headers';
 import ImageGallery from 'react-image-gallery';
+import { Carousel } from 'react-responsive-carousel';
 //SCSS
 import "../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 
@@ -39,7 +40,7 @@ render() {
       <p className="story">Vinculum was formed during VHacks, the first hackathon to take place in Vatican City in March 2018. 
       Our team consists of 6 people from 3 countries and very unique backgrounds. We quickly bonded over our drive to develop technology for humanitarian purposes and as a result, Vinculum was created.
       Although many projects remain untouched after a hackathon, our team decided to stick together because we want to expand the technology and reach of this application. 
-      As we continue to develop and build, we hope that Vinculum can be successfully used by families to find their missing loved ones and reunite people, one match at a time.
+      As we continue to develop and build, we hope that Vinculum can be successfully used by families to find their missing loved ones and reunite people, one photo at a time.
       </p>
       <img src={team} className="team"/>
       <p>Team Vinculum during VHacks-2018 demos </p>
