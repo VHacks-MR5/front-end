@@ -4,28 +4,33 @@ import axios from 'axios';
 import './styles/results.css';
 import loading from './img/loading.gif';
 import Footer from './Footer';
+import ContactApp from './ContactApp';
 import { Header } from './Headers';
+import {Router, Route, Link, RouteHandler} from 'react-router';
 
 class ResultsList extends React.Component {
   constructor(props) {
     super(props); 
     console.log(this.props.url);
     this.state = {
-      loading: true,
+      loading: true, 
+      contact: false,
       texts:[], 
       image: '', 
       uploaded_image: this.props.url
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    this.setState({'contact': true}); 
+    console.log('hello');
   }
 
 componentWillMount() {
 
 }
-
-//https://pbs.twimg.com/profile_images/699011281118851072/JwU6pzeT_400x400.jpg"
-
-componentDidMount(){ 
-        console.log('tryna get');
+componentDidMount(){
         axios.get("https://cors-anywhere.herokuapp.com/" + "http://23.101.170.100:5000/match/app?url="+this.state.uploaded_image,
           'headers':{
         'Access-Control-Allow-Origin':'*'})
@@ -35,16 +40,9 @@ componentDidMount(){
           const data = response.data.messages.splice(0,response.data.messages.length-1);  
           const score = data[0].text.substring(data[0].text.length-3,data[0].text.length);
           this.setState({ texts: score, image: photo });
-       }) 
+       }); 
     }
 
-//More rendering stuff
- // {this.state.texts.map(function(object,i) {
- //            return ( 
- //              <div>
- //                </div>
- //            );
- //          })}
   render() { 
     if (this.state.loading) {
       return ( 
@@ -56,6 +54,8 @@ componentDidMount(){
           <Footer/>
         </div>
       )
+    } else if (this.state.contact){
+      return (<ContactApp score={this.state.texts} person_image={this.state.image} submitted_photo={this.state.uploaded_image}/>)
     } else {
       return (
         <div>
@@ -64,7 +64,9 @@ componentDidMount(){
           <div className="text-styling">
           <h5>The similiarity score between this photo and the photo you submitted is {this.state.texts}</h5>
           <h5>This photo was entered into the Interpol database on May 5th, 2018.</h5>
-          <h5>Think this is your missing relative? Contact us and we can give you more information</h5>
+          <br/>
+          <h5>Think this is your missing relative?</h5>
+          <input className="btn submit" type="submit" onClick={this.handleSubmit} value="Apply to Contact your relative"/>
           </div> 
           <Footer/>
         </div>

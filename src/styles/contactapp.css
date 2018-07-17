@@ -1,0 +1,10 @@
+@import 'colors.css'; 
+
+.center-align{
+	margin-left: 40%;
+	text-align: center;
+}
+
+.textfield-border{
+	border: .01em solid var(--dark-grey);
+}

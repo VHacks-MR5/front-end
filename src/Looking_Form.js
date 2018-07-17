@@ -143,20 +143,6 @@ class LookingForm extends React.Component {
       this.setState({person_image: imageScreenshot.preview, person_file: split[size-1]});
   }
 
-  handleClick(e) {
-    console.log('this is:', this);
-  }
-
-/**my_email: this.my_email,
-        my_phone: this.my_phone,
-        person_image: this.person_image,
-        person_name: this.person_name,
-        person_age: this.person_age, 
-        person_gender: this.person_gender, 
-        person_nationality:this.person_nationality, 
-        person_nname:this.person_nname, 
-        person_location: this.person_location**/
-
   render() { 
     if (this.state.submitted){
       return (<ResultsList url={this.state.personImageUrl}/>)
@@ -167,7 +153,7 @@ class LookingForm extends React.Component {
         <br />
         <h5>Please enter the url of a publically hosted image</h5>
         <input className="mdl-textfield__input answer center-align" type="text" name="photo" placeholder="Link to image url" onChange={this.personImageUrl} required/> 
-        <input className="btn submit" type="submit"disabled={!this.state.validUrl} value="Submit" />
+        <input className="btn submit" type="submit" disabled={!this.state.validUrl} value="Submit" />
         <Row>
          <h4>These fields are currently not used for search purposes. Future development will implement search via text and image input.</h4>
           <Col sm="6" className="stripe"> 
