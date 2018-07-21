@@ -7,7 +7,7 @@ import axios from 'axios';
 import './styles/results.css';
 import './styles/about.css';
 import './styles/contactapp.css';
-import Footer from './Footer';
+import {Footer} from './Footer';
 import { Header } from './Headers';
 var http = require("https");
 var base64Img = require('base64-img');

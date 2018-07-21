@@ -12,8 +12,16 @@
   bottom:0px;
   height:80px;
   width:100%;
-  position:relative;
 }
+
+.footerposition1{
+  position:sticky;
+}
+
+.footerposition2{
+  position:fixed;
+}
+
 
 .footer-logo-container {
   align-items: inline-block;

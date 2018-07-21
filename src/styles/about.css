@@ -3,6 +3,11 @@
 	font-family: var(--serif);;
 }
 
+.upload-text{
+	margin-bottom: 40px;
+	font-family: var(--serif);;
+}
+
 ul, li {
 	font-family:var(--sans-serif);
 	font-size: 1.1em;

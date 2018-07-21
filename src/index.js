@@ -6,6 +6,8 @@ import './styles/index.css';
 import Home from './Home';
 import Form from './Form'; 
 import About from './About';
+import SearchUpload from './SearchUpload';
+import Upload from './Upload';
 import ContactApp from './ContactApp';
 import ResultsList from './ResultsList';
 import CaptureImage from './CaptureImage';
@@ -15,7 +17,10 @@ ReactDOM.render((
 	<Router history={hashHistory}>
 		<Route path="/" component={Home}/>
 		<Route path="/about" component={About}/>
-		<Route path="/form" component={Form}/>
+		<Route path="/form" component={Form}/> 
+		<Route path="/supload" component={SearchUpload}/>
+		<Route path="/upload" component={Upload}/> 
+
 	</Router>
   ), document.getElementById('root'))
 

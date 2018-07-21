@@ -12,7 +12,7 @@ import john from './img/john.jpg';
 import ethan from './img/ethan.jpg';
 import rachana from './img/rachana.jpg';
 import loading from './img/loading.gif';
-import Footer from './Footer';
+import {Footer} from './Footer';
 import { Header } from './Headers';
 import ImageGallery from 'react-image-gallery';
 import { Carousel } from 'react-responsive-carousel';

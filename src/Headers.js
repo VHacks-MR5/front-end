@@ -25,6 +25,7 @@ export class HeaderHome extends React.Component {
         <Link to="/" className="nav-item nav-item-home">Home</Link>
         <Link to="/about" className="nav-item nav-item-home">About</Link>
         <Link to="/form" className="nav-item nav-item-home">Search People</Link>
+        <Link to="/upload" className="nav-item nav-item-home">Add People</Link>
       </div>
     </header>
     </div>
@@ -50,7 +51,8 @@ export class Header extends React.Component {
       <div className="nav">
         <Link to="/" className="nav-item">Home</Link>
         <Link to="/about" className="nav-item">About</Link>
-        <Link to="/form" className="nav-item">Search People</Link>
+        <Link to="/form" className="nav-item nav-item-home">Search People</Link>
+        <Link to="/upload" className="nav-item nav-item-home">Add People</Link>
       </div>
     </header>
     </div>

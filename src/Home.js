@@ -11,7 +11,7 @@ import lock from './img/lock-white.png';
 import './styles/App.css';
 import './styles/home.css';
 import { HeaderHome } from './Headers.js';
-import Footer from './Footer.js';
+import {Footer} from './Footer.js';
 
 
 
@@ -33,7 +33,8 @@ render() {
             <h3 className="title">Together. Again.</h3>
             <p className="subtitle">Every year tens of thousands of migrants and refugeees lose one another. Vinculum reunites loved ones by using face-recognition. Upload a photo and find your lost one.</p> 
           </div>
-          <Link to="/form" className="demo">Find Them</Link>
+          <Link to="/form" className="demo">Search people</Link>
+          <Link to="/upload" className="demo">Add people</Link>
         </div>
 
         <div className="welcome"> 
