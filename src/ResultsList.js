@@ -30,7 +30,7 @@ componentWillMount() {}
 
 componentDidMount(){
   fetch("http://23.101.170.100:5000/upload", {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',

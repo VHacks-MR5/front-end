@@ -87,7 +87,7 @@ class Upload extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    fetch('http://localhost:5000/upload/web', {
+    fetch('http://23.101.170.100:5000/upload/web', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
