@@ -29,6 +29,7 @@ class LookingForm extends React.Component {
     this.ageChange = this.ageChange.bind(this);
     this.nationalityChange = this.nationalityChange.bind(this);
 
+    this.handleRetake = this.handleRetake.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -85,23 +86,32 @@ class LookingForm extends React.Component {
       this.setState({person_image: imageScreenshot.preview, person_file: split[size-1]});
   }
 
+  handleRetake() {
+    this.setState({my_screenshot: null})
+  }
+
   render() { 
     if (this.state.submitted){
       return (<ResultsList missing_person={this.state.my_image}/>)
     } else {
     return (
       <div className="App">
-      <h1 className="about-headers">Search for a missing person</h1>
+      <h1 className="search-headers">Search for a missing person</h1>
       <form onSubmit={this.handleSubmit} className="">  
       <Container>
       <Row>
       <div className="credentials-input">
-      <CaptureImage callbackFromParent={this.imageMeCallback}/> 
-      {this.state.my_screenshot ? <div><p> This is the image that will be submitted. If you would like to retake the photo, simply re-capture the photo</p><img src={this.state.my_screenshot} /></div> : null}
+        {this.state.my_screenshot ? 
+          <div>
+            <img src={this.state.my_screenshot} />
+            <p> This is the image that will be submitted. If you would like to retake the photo, simply re-capture the photo</p>
+            <button className="btn submit"  onClick={this.handleRetake} > Retake </button>
+            <input id="submit" className="btn submit" type="submit" visibility="hidden" value="Submit" />
+          </div>
+        : <CaptureImage callbackFromParent={this.imageMeCallback}/> }
           
       </div>
       </Row>
-      <input className="btn submit" type="submit" value="Submit" />
       </Container>
       </form>
       <Footer/>

@@ -4,13 +4,14 @@
   background-color: var(--light-teal);
   font-family:var(--sans-serif);
   width: auto;
-  padding: 20px; 
+  padding-top: 10px;
+  padding-left: 20px; 
   color: white;
   display: inline-block;
   position:fixed;
   left:0px;
   bottom:0px;
-  height:80px;
+  height:60px;
   width:100%;
 }
 
@@ -21,7 +22,6 @@
 .footerposition2{
   position:fixed;
 }
-
 
 .footer-logo-container {
   align-items: inline-block;
@@ -38,7 +38,6 @@
 
 .footer-info {
   font-family:var(--sans-serif); 
-  margin-top: 5px;
+  margin-top: 20px;
   margin-left: 50px;
-  margin-bottom: 20px;
 }

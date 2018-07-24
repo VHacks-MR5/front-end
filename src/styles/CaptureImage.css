@@ -1,14 +1,21 @@
 @import 'colors.css';
 
+.search-header{
+  font-family: var(--serif);;
+}
+
+
 .capimage{
 	position: relative;
+  margin-left: 30px;
+  margin-bottom: 150px;
 }
 
 .uploadimage{
   position: relative;
   width: 50px;
 }
-
+ 
 input{
 	vertical-align: right;
 }
@@ -51,8 +58,7 @@ h4{
   justify-content: center;
   text-align: center;
   width: 300px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-left: 400px;
 }
 
 .answer {
@@ -74,8 +80,7 @@ h4{
   color: white;
   border: 1px solid white;
   border-radius: 15px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 10px;
 }
 
 .whiteSpace{

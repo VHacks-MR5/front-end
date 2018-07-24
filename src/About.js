@@ -22,14 +22,11 @@ import "../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 //CSS
 import "../node_modules/react-image-gallery/styles/css/image-gallery.css";
 
-
-
 class About extends React.Component {
   constructor(props) {
     super(props); 
     
     };
-
 
 render() {
     var hashHistory = Router.hashHistory; 

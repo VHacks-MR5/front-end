@@ -2,7 +2,7 @@
 
 .header {
   background-color: var(--light-teal);
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
   font-family: var(--serif);
@@ -11,18 +11,17 @@
 .header-home {
   background-color: var(--light-teal);
   color: white;
-  height: 150px;
+  height: 100px;
 }
 
 .header-logo-container {
   align-items: inline;
   vertical-align: center;
   margin-left: 200px;
-  margin-top: 20px;
 }
 
 .header-logo {
-  height: 80px; width: auto;
+  height: 65px; width: auto;
   float: left;
   background-color: var(--light-teal);
 }
@@ -46,6 +45,7 @@
   font-size: 20px;
   text-decoration: none;
   margin-left: 50px;
+  font-family: var(--sans-serif);
 }
 
 .nav-item:hover {

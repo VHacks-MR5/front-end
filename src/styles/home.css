@@ -6,18 +6,18 @@
 }
 
 .title-container {
-  padding-top: 100px;
+  padding-top: 55px;
   text-align: center;
 }
 
 .title {
-  font-size: 120px;
+  font-size: 100px;
   color: white;
-  margin-bottom: 200px;
+  margin-bottom: 120px;
 }
 
 .subtitle {
-  font-size: 30px;
+  font-size: 25px;
   margin-left: 200px;
   margin-right: 200px;
   color: white;
@@ -27,14 +27,15 @@
 
 .demo {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   text-decoration: none;
   padding: 15px; 
-  margin: 10px;
+  margin: 20px;
   background-color: var(--dark-grey);
   color: white;
   border: 1px solid white;
   border-radius: 15px;
+  font-family: var(--sans-serif);
 }
 
 .demo-upload {
@@ -118,11 +119,16 @@
   margin-bottom: 40px;
 }
 
+.down-arrow {
+  height: 80px;
+  padding-top: 20px;
+}
+
 .mobile {
   height: 1050px;
   padding-top: 150px;
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 250px;
+  padding-right: 250px;
   display: inline-block;
 }
 

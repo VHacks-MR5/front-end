@@ -8,6 +8,7 @@ import desktop from './img/desktop-blue.png';
 import screenshot from './img/screenshot.jpg';
 import globe from './img/globe-white.png';
 import lock from './img/lock-white.png';
+import arrow from './img/down-arrow.png';
 import './styles/App.css';
 import './styles/home.css';
 import { HeaderHome } from './Headers.js';
@@ -31,13 +32,16 @@ render() {
         <div className="hugs">
           <div className="title-container">
             <h3 className="title">Together. Again.</h3>
-            <p className="subtitle">Every year tens of thousands of migrants and refugeees lose one another. Vinculum reunites loved ones by using face-recognition. Upload a photo and find your lost one.</p> 
+            <p className="subtitle">Every year, tens of thousands of migrants and refugeees lose one another. Vinculum reunites loved ones by using face-recognition. Upload a photo and find your lost one.</p> 
           </div>
-          <Link to="/form" className="demo">Search people</Link>
-          <Link to="/upload" className="demo">Add people</Link>
+          <div>
+            <Link to="/form" className="demo">Search people</Link>
+            <Link to="/upload" className="demo">Add people</Link>
+          </div>
+          <a href="#welcome"><img src={arrow} className="down-arrow"/></a>
         </div>
 
-        <div className="welcome"> 
+        <div id="welcome" className="welcome"> 
          <Container> 
          <Row> 
           <Col className="noPadding">
@@ -81,50 +85,50 @@ render() {
 
         <div className="mobile">
           <Container>
- <Row>
+            <Row>
               <h3 className="welcome-title">Device Diversity.</h3>
               <p className="platform-description ">Our platform works across all devices. Use our webpage on desktop or mobile to upload images. Or, use our ChatBot to walk you through the process and give you the results.</p> 
             </Row>
           </Container>
-            <div className="mobile-text"> 
+          <div className="mobile-text"> 
             <Container>
-           
-            <Row>
-              <Col className="col-2">
-              <img className="img-valign-globe" src={flipphone} />
-              </Col> 
-              <Col className="col-10">
-                <h4 className="noPadding">Basic Phone</h4>
-                <p>[This feature is currently not available to the public as we are undergoing development. We appreciate your patience.]</p>
-              </Col> 
-            </Row>
-            <Row>
-              <Col className="col-2">
-              <img className="img-valign-globe" src={smartphone} />
-              </Col> 
-              <Col className="col-10">
-                <h4 className="noPadding">Smartphone</h4>
-                <p>Head over to the <a href="http://m.me/202064163912158"> Messenger bot </a> on our Facebook page to upload images of yourself and test the software out. You must have a Facebook account to use this feature.</p>
-              </Col> 
-            </Row>
-            <Row>
-              <Col className="col-2">
-              <img className="img-valign-globe" src={desktop} />
-              </Col> 
-              <Col className="col-10">
-                <h4 className="noPadding">Desktop</h4>
-                <p>Click on the buttons above to get started!</p>
-              </Col> 
-            </Row>
+              <Row>
+                <Col className="col-2">
+                <img className="img-valign-globe" src={flipphone} />
+                </Col> 
+                <Col className="col-10">
+                  <h4 className="noPadding">Basic Phone</h4>
+                  <p>Just text "hello vinculum" to 1-806-482-1151. Follow the steps provided to either post or find a missing person.</p>
+                </Col> 
+              </Row>
+              <Row>
+                <Col className="col-2">
+                <img className="img-valign-globe" src={smartphone} />
+                </Col> 
+                <Col className="col-10">
+                  <h4 className="noPadding">Smartphone</h4>
+                  <p>Head over to the <a href="http://m.me/202064163912158"> Messenger bot </a> on our Facebook page to upload images of yourself and test the software out. You must have a Facebook account to use this feature.</p>
+                </Col> 
+              </Row>
+              <Row>
+                <Col className="col-2">
+                <img className="img-valign-globe" src={desktop} />
+                </Col> 
+                <Col className="col-10">
+                  <h4 className="noPadding">Desktop</h4>
+                  <p>Click <Link to="/form"> Here </Link> to get started!</p>
+                </Col> 
+              </Row>
             </Container>
+          </div>
+
+          <div id="div1" className="div1">
+            <div id="div2" className="div2">
+                <div id="div3" className="div3">
+                  <div id="div4" className="div4"></div>
+                </div>
             </div>
-            <div id="div1" className="div1">
-              <div id="div2" className="div2">
-                  <div id="div3" className="div3">
-                    <div id="div4" className="div4"></div>
-                  </div>
-              </div>
-            </div>
+          </div>
         </div>
         <Footer/>
 
