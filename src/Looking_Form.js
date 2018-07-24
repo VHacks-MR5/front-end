@@ -55,22 +55,6 @@ class LookingForm extends React.Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    fetch('http://52.170.250.135:5000/upload', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin':'*',
-      },
-      body: JSON.stringify({
-        image_string: this.state.my_image
-      })
-    }).then((res) => {
-      console.log("this is res", res);
-    }).catch((err) => {
-      console.log(err)
-    });
     this.setState({'submitted': true});
   }
 

@@ -28,7 +28,8 @@ class ContactApp extends React.Component {
       notes: '', 
       score: this.props.texts,
       person_image: this.props.person_image,
-      submitted_photo: this.props.submitted_photo
+      submitted_photo: this.props.submitted_photo, 
+      information: this.props.information
     }
 
     this.NameChange = this.NameChange.bind(this);
@@ -83,14 +84,21 @@ class ContactApp extends React.Component {
       mode: 'no-cors',
       body: JSON.stringify({
         searcher_image: this.state.my_image,
-        name: this.state.my_name,
-        age: this.state.age, 
-        relation: this.state.relation, 
-        location: this.state.location,
-        contact: this.state.contact,
-        info: this.state.notes, 
+        searcher_name: this.state.my_name,
+        searcher_age: this.state.age, 
+        searcher_relation: this.state.relation, 
+        searcher_location: this.state.location,
+        searcher_contact: this.state.contact,
+        searcher_info: this.state.notes, 
         missing_person_image: this.state.person_image,
-        searcher_submitted_image: this.state.submitted_photo
+        searcher_submitted_image: this.state.submitted_photo, 
+        missing_person_name: this.state.information[1],
+        missing_person_age: this.state.information[3].toString(),
+        missing_person_image_source: this.state.information[7],
+        missing_person_nationality: this.state.information[5],
+        missing_person_uploader_name: this.state.information[8],
+        missing_person_uploader_relation: (this.state.information[9] != null ? this.state.information[9] : ''),
+        missing_person_contact: (this.state.information[10] != null ? this.state.information[10] : '')
       })
     }).then((res) => {
     }).catch((err) => {
