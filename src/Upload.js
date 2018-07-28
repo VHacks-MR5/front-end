@@ -77,7 +77,7 @@ class Upload extends React.Component {
   handleSubmit(event) {
     event.preventDefault(); 
     var server_url = 'https://23.101.170.100:5000/enroll/app'
-    fetch(, {
+    fetch({
       method: 'GET',
       headers: {
         'Accept': 'application/json',
