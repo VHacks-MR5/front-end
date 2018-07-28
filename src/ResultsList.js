@@ -30,7 +30,7 @@ class ResultsList extends React.Component {
 componentWillMount() {}
 
 componentDidMount(){
-  fetch("http://23.101.170.100:5000/upload", {
+  fetch("https://23.101.170.100:5000/upload", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -53,16 +53,6 @@ componentDidMount(){
       console.log(err)
     });
     this.setState({loading: false});
-   //  axios.get("https://cors-anywhere.herokuapp.com/" + "http://23.101.170.100:5000/match/app?url="+this.state.uploaded_image,
-   //    'headers':{
-   //  'Access-Control-Allow-Origin':'*'})
-   //  .then( response => {
-   //    this.setState({loading: false});
-   //    const photo = response.data.messages.splice(-1,1)[0].attachment.payload.url; 
-   //    const data = response.data.messages.splice(0,response.data.messages.length-1);  
-   //    const score = data[0].text.substring(data[0].text.length-3,data[0].text.length);
-   //    this.setState({ texts: score, image: photo });
-   // }); 
 }
 
   render() { 

@@ -28,7 +28,7 @@ class Upload extends React.Component {
       file_string: ''
       };
 
-    this.fileChange = this.fileChange.bind(this);
+    this.getBase64Change = this.getBase64.bind(this);
     this.nameChange = this.nameChange.bind(this);
     this.ageChange = this.ageChange.bind(this);
     this.nationalityChange = this.nationalityChange.bind(this);
@@ -63,32 +63,22 @@ class Upload extends React.Component {
     this.setState({nationality: event.target.value});
   }
 
-  fileChange(event) {
-    this.setState({file: event.target.files[0]});
-   function toDataURL(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.onload = function() {
-      var reader = new FileReader();
-      reader.onloadend = function() {
-        callback(reader.result);
-      }
-      reader.readAsDataURL(xhr.response);
-    };
-    xhr.open('GET', url);
-    xhr.responseType = 'blob';
-    xhr.send();
-  }
-
-  toDataURL(this.state.file, function(dataUrl) {
-    console.log('RESULT:', dataUrl.split(/,(.+)/)[1]);
-    // this.setState({file_string:dataUrl.split(/,(.+)/)[1]});
-  });  
-  }
+  getBase64(file) {
+   var reader = new FileReader();
+   reader.readAsDataURL(file);
+   reader.onload = function () {
+     console.log(reader.result);
+   };
+   reader.onerror = function (error) {
+     console.log('Error: ', error);
+   };
+}
 
   handleSubmit(event) {
-    event.preventDefault();
-    fetch('http://23.101.170.100:5000/upload/web', {
-      method: 'POST',
+    event.preventDefault(); 
+    var server_url = 'https://23.101.170.100:5000/enroll/app'
+    fetch(, {
+      method: 'GET',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
