@@ -64,6 +64,7 @@ render() {
       </ul>
       <h1 className="about-headers">In The Media</h1>
       <ul>
+          <li><a href="https://www.exeter.ox.ac.uk/exeter-student-shiri-heffetz-competes-in-hackathon-at-the-vatican/">Exeter College article about Vinculum</a> </li>
           <li><a href="https://blogs.msdn.microsoft.com/microsoftimagine/2018/05/06/2018-u-s-imagine-cup-winners-announced/"> Imagine Cup US Winners Announcement - Microsoft Blog</a> </li>
           <li><a href="https://blogs.msdn.microsoft.com/microsoftimagine/2018/04/16/here-are-the-2018-us-imagine-cup-finalists-competing-for-10000/"> Imagine Cup US Finalists Announcement - Microsoft Blog</a> </li>
           <li><a href="https://blogs.msdn.microsoft.com/microsoftimagine/2018/04/05/students-hack-for-social-good-first-ever-vatican-hacks/"> Students hack for social good - Microsoft Blog </a> </li>      
