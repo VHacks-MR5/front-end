@@ -4,7 +4,7 @@ import CaptureImage from './CaptureImage';
 import UploadImage from './UploadImage';
 import ResultsList from './ResultsList';
 import About from './About';
-import {Footer} from './Footer';
+import {Footer, FooterFixed} from './Footer';
 import './styles/CaptureImage.css';
 import { Container, Row, Col } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -73,18 +73,9 @@ class LookingForm extends React.Component {
   handleRetake() {
     this.setState({my_screenshot: null})
   }
-
-  render() { 
-    if (this.state.submitted){
-      return (<ResultsList missing_person={this.state.my_image}/>)
-    } else {
-    return (
-      <div className="App">
-      <h1 className="search-headers">Search for a missing person</h1>
-      <form onSubmit={this.handleSubmit} className="">  
-      <Container>
-      <Row>
-      <div className="credentials-input">
+/** 
+Search feature
+<div className="credentials-input">
         {this.state.my_screenshot ? 
           <div>
             <img src={this.state.my_screenshot} />
@@ -95,10 +86,25 @@ class LookingForm extends React.Component {
         : <CaptureImage callbackFromParent={this.imageMeCallback}/> }
           
       </div>
+      **/
+  render() { 
+    if (this.state.submitted){
+      return (<ResultsList missing_person={this.state.my_image}/>)
+    } else {
+    return (
+      <div className="App">
+      <h1 className="about-headers">Search for a missing person</h1>
+      <form onSubmit={this.handleSubmit} className="">  
+      <Container>
+      <br /><br /><br />
+      <Row>
+      <div className="credentials-input">
+        <h3>This feature is currently undergoing some changes and is not available to the public. We apologize for any inconveniences.</h3>
+      </div>
       </Row>
       </Container>
       </form>
-      <Footer/>
+      <FooterFixed/>
       </div>
     );}
 }

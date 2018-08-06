@@ -103,24 +103,9 @@ class Upload extends React.Component {
     this.setState({'submitted': true});
   }
 
-  render() {
-  if (this.state.submitted){
-      return (
-        <div className="App">
-        <Header/>
-        <h1 className="about-headers"> Thank you for submitting information about your missing relative. </h1>
-        <h4 className="about-headers"> If someone believes that they have found your relative we will reach out to you to arrange a connection.</h4>
-        <h4 className="upload-text"> In the meanwhile, use the search feature to check if someone has uploaded an image of your relative. </h4>
-        <Link to="/form" className="demo-upload">Search for missing relative</Link>
-        <FooterFixed /> 
-        </div>
-      )
-    } else { 
-    return (
-      <div className="App">
-      <Header/> 
-      <h1 className="about-headers">Add a missing person</h1>
-      <form onSubmit={this.handleSubmit} className="">  
+  /**
+  Submit form html
+  <form onSubmit={this.handleSubmit} className="">  
       <Container className="centered">
       <Row >
       <div className="credentials-input">
@@ -146,6 +131,35 @@ class Upload extends React.Component {
       <input className="btn submit" type="submit" value="Submit" />
       </Container>
       </form>
+
+
+  **/
+
+  render() {
+  if (this.state.submitted){
+      return (
+        <div className="App">
+        <Header/>
+        <h1 className="about-headers"> Thank you for submitting information about your missing relative. </h1>
+        <h4 className="about-headers"> If someone believes that they have found your relative we will reach out to you to arrange a connection.</h4>
+        <h4 className="upload-text"> In the meanwhile, use the search feature to check if someone has uploaded an image of your relative. </h4>
+        <Link to="/form" className="demo-upload">Search for missing relative</Link>
+        <FooterFixed /> 
+        </div>
+      )
+    } else { 
+    return (
+      <div className="App">
+      <Header/> 
+      <h1 className="about-headers">Add a missing person</h1>
+      <Container>
+      <br /><br /><br />
+      <Row>
+      <div className="credentials-input">
+        <h3>This feature is currently undergoing some changes and is not available to the public. We apologize for any inconveniences.</h3>
+      </div>
+      </Row>
+      </Container>
       <FooterFixed/> 
       </div>
     );}

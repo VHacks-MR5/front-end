@@ -14,7 +14,10 @@ import './styles/home.css';
 import { HeaderHome } from './Headers.js';
 import {Footer} from './Footer.js';
 
-
+/**Descriptors for working tech
+<p>Head over to the <a href="http://m.me/202064163912158"> Messenger bot </a> on our Facebook page to upload images of yourself and test the software out. You must have a Facebook account to use this feature.</p>
+<p>Click <Link to="/form"> Here </Link> to get started!</p>
+**/
 
         
 
@@ -107,7 +110,7 @@ render() {
                 </Col> 
                 <Col className="col-10">
                   <h4 className="noPadding">Smartphone</h4>
-                  <p>Head over to the <a href="http://m.me/202064163912158"> Messenger bot </a> on our Facebook page to upload images of yourself and test the software out. You must have a Facebook account to use this feature.</p>
+                  <p>This feature is currently not available as we undergo development. We appreciate your patience. </p>
                 </Col> 
               </Row>
               <Row>
@@ -116,7 +119,7 @@ render() {
                 </Col> 
                 <Col className="col-10">
                   <h4 className="noPadding">Desktop</h4>
-                  <p>Click <Link to="/form"> Here </Link> to get started!</p>
+                  <p>This feature is currently not available as we undergo development. We appreciate your patience.</p>
                 </Col> 
               </Row>
             </Container>

@@ -57,6 +57,7 @@ render() {
       </div>
       <h1 className="about-headers">Recognitions</h1> 
       <ul>
+        <li>Semi-Finalists - World Finals, Microsoft Imagine Cup 2018</li>
         <li>5th place - US Finals, Microsoft Imagine Cup 2018</li>
         <li>Audience Choice Award - VHacks 2018</li> 
         <li>Third Place: Migrants and Refugees category - VHacks 2018</li>
