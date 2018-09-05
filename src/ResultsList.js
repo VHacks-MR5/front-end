@@ -32,6 +32,13 @@ class ResultsList extends React.Component {
 componentWillMount() {}
 
 componentDidMount(){
+  var payload = {
+      image_string: this.state.uploaded_image
+  };
+
+  var data = new FormData();
+  data.append( "json", JSON.stringify( payload ) );
+
   fetch("https://23.101.170.100:5000/upload", {
       method: 'POST',
       headers: {
@@ -39,9 +46,7 @@ componentDidMount(){
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin':'*',
       },
-      body: JSON.stringify({
-        image_string: this.state.uploaded_image
-        })
+      body: data
     }).then((res) => {
       return res.json();
     }).then((data) =>{ 
