@@ -101,14 +101,7 @@ Search feature
       <Row>
       <div className="credentials-input">
     
-        {this.state.my_screenshot ? 
-          <div>
-            <img src={this.state.my_screenshot} />
-            <p> This is the image that will be submitted. If you would like to retake the photo, simply re-capture the photo</p>
-            <button className="btn submit"  onClick={this.handleRetake} > Retake </button>
-            <input id="submit" className="btn submit" type="submit" visibility="hidden" value="Submit" />
-          </div>
-        : <CaptureImage callbackFromParent={this.imageMeCallback}/> }
+        <h3>This feature is currently undergoing some changes and is not available to the public. We apologize for any inconveniences.</h3>
         
       </div>
       </Row>
