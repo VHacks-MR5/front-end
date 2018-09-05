@@ -119,7 +119,7 @@ render() {
                 </Col> 
                 <Col className="col-10">
                   <h4 className="noPadding">Desktop</h4>
-                  <p>This feature is currently not available as we undergo development. We appreciate your patience.</p>
+                  <p>This feature is currently not available as we undergo development. We appreciate your patience. </p>
                 </Col> 
               </Row>
             </Container>

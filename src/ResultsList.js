@@ -32,7 +32,7 @@ class ResultsList extends React.Component {
 componentWillMount() {}
 
 componentDidMount(){
-  fetch("http://23.101.170.100:5000/upload", {
+  fetch("https://23.101.170.100:5000/upload", {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
