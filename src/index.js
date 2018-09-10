@@ -11,6 +11,7 @@ import Upload from './Upload';
 import ContactApp from './ContactApp';
 import ResultsList from './ResultsList';
 import CaptureImage from './CaptureImage';
+import WebChatBot from './WebChatBot';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render((
@@ -20,6 +21,7 @@ ReactDOM.render((
 		<Route path="/form" component={Form}/> 
 		<Route path="/supload" component={SearchUpload}/>
 		<Route path="/upload" component={Upload}/> 
+		<Route path="/webbot" component={WebChatBot}/> 
 
 	</Router>
   ), document.getElementById('root'))

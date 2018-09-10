@@ -4,7 +4,6 @@
   font-family: var(--serif);;
 }
 
-
 .capimage{
 	position: relative;
   margin-left: 30px;
@@ -85,6 +84,10 @@ h4{
 
 .whiteSpace{
   height:75px;
+}
+
+.iframe-style{
+   vertical-align: center;
 }
 
 .submit:hover {

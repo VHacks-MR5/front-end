@@ -36,8 +36,11 @@ componentDidMount(){
       image_string: this.state.uploaded_image
   };
 
+  console.log(payload);
+
   var data = new FormData();
   data.append( "json", JSON.stringify( payload ) );
+  console.log(JSON.stringify( payload ) );
 
   fetch("https://23.101.170.100:5000/upload", {
       method: 'POST',
@@ -46,7 +49,7 @@ componentDidMount(){
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin':'*',
       },
-      body: data
+      body: JSON.stringify( payload )
     }).then((res) => {
       return res.json();
     }).then((data) =>{ 

@@ -97,16 +97,14 @@ Search feature
       <h1 className="about-headers">Search for a missing person</h1>
       <form onSubmit={this.handleSubmit} className="">  
       <Container>
-      <br /><br /><br />
+      <br />
       <Row>
-      <div className="credentials-input">
-    
-        <h3>This feature is currently undergoing some changes and is not available to the public. We apologize for any inconveniences.</h3>
-        
-      </div>
+      <h3>The web version of this feature is currently undergoing some changes and is not available to the public. We apologize for any inconveniences.</h3>
+      <h3>In the meanwhile, you can test out the features via our <Link to="/webbot">Web chat bot</Link>.</h3>
       </Row>
       </Container>
       </form>
+      <br /><br />
       <FooterFixed/>
       </div>
     );}
