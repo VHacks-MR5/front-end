@@ -12,6 +12,7 @@ import ContactApp from './ContactApp';
 import ResultsList from './ResultsList';
 import CaptureImage from './CaptureImage';
 import WebChatBot from './WebChatBot';
+import RoadMap from './RoadMap';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render((
@@ -22,6 +23,7 @@ ReactDOM.render((
 		<Route path="/supload" component={SearchUpload}/>
 		<Route path="/upload" component={Upload}/> 
 		<Route path="/webbot" component={WebChatBot}/> 
+		<Route path="/roadmap" component={RoadMap}/> 
 
 	</Router>
   ), document.getElementById('root'))
