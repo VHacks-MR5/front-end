@@ -18,7 +18,9 @@
 .footerposition1{
   position:sticky;
 }
-
+p {
+   font-family:var(--sans-serif);
+}
 .footerposition2{
   position:fixed;
 }
@@ -41,3 +43,6 @@
   margin-top: 20px;
   margin-left: 50px;
 }
+
+.margin_bottom{
+} 

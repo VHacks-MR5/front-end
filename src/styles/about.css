@@ -26,6 +26,11 @@ p {
 
 .roadmap{
 }
+
+.journey{
+	width:70%;
+	height: 70%;
+}
 .story{
 	font-size: 1.2em;
 	text-align: center;
